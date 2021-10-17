@@ -12,8 +12,8 @@ import pandas as pd
 # Importing the dataset
 dataset = pd.read_csv('Cars_data.csv')
 
-X = dataset.iloc[:, :-1].values
-y = dataset.iloc[:, 1].values
+X = dataset.iloc[:, 3].values
+y = dataset.iloc[:, 4].values
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
