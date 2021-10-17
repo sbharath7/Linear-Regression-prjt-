@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Importing the dataset
-dataset = pd.read_csv('Salary_Data.csv')
+dataset = pd.read_csv('Cars_data.csv')
 
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 1].values
@@ -30,16 +30,16 @@ y_pred = regressor.predict(X_test)
 # Visualising the Training set results
 plt.scatter(X_train, y_train, color = 'red')
 plt.plot(X_train, regressor.predict(X_train), color = 'blue')
-plt.title('Salary vs Experience (Training set)')
-plt.xlabel('Years of Experience')
-plt.ylabel('Salary')
+plt.title('Selling price vs Km driven (Training set)')
+plt.xlabel('km driven')
+plt.ylabel('Selling price')
 plt.show()
 
 # Visualising the Test set results
 plt.scatter(X_test, y_test, color = 'red')
 plt.plot(X_train, regressor.predict(X_train), color = 'blue')
-plt.title('Salary vs Experience (Test set)')
-plt.xlabel('Years of Experience')
-plt.ylabel('Salary')
+plt.title('Selling price vs km driven (Test set)')
+plt.xlabel('km driven')
+plt.ylabel('Selling price')
 plt.show()
 
